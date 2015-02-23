@@ -10,23 +10,51 @@
 # ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3 {C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3/BusMux.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3 {C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/FullAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module FullAdder
+# 
+# Top level modules:
+# 	FullAdder
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3 {C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/RCA8.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RCA8
+# 
+# Top level modules:
+# 	RCA8
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3 {C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Negator.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Negator
+# 
+# Top level modules:
+# 	Negator
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3 {C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/BusMux.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module BusMux
 # 
 # Top level modules:
 # 	BusMux
-# 
-# vlog -vlog01compat -work work +incdir+C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3 {C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3/BusMuxTestBench.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3 {C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSign.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module BusMuxTestBench
+# -- Compiling module AbsSign
 # 
 # Top level modules:
-# 	BusMuxTestBench
+# 	AbsSign
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  BusMuxTestBench
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps BusMuxTestBench 
-# Loading work.BusMuxTestBench
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3 {C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSignTestBench.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module AbsSignTestBench
+# 
+# Top level modules:
+# 	AbsSignTestBench
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  AbsSignTestBench
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps AbsSignTestBench 
+# Loading work.AbsSignTestBench
+# Loading work.AbsSign
+# Loading work.Negator
+# Loading work.RCA8
+# Loading work.FullAdder
 # Loading work.BusMux
 # 
 # add wave *

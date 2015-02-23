@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Negator
-Thu Feb 19 16:57:36 2015
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Mon Feb 23 01:59:05 2015
+Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -9,8 +9,14 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   1. Legal Notice
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Port Connectivity Checks: "Negator:neg|RCA8:rca8|FullAdder:fa0"
+  9. Port Connectivity Checks: "Negator:neg|RCA8:rca8"
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +42,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Feb 19 16:57:36 2015          ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 23 01:59:05 2015      ;
+; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Negator                                    ;
 ; Top-level Entity Name              ; AbsSign                                    ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 8                                          ;
+;     Total combinational functions  ; 8                                          ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 16                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -140,24 +146,114 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 4      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
+; FullAdder.v                      ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/FullAdder.v ;         ;
+; RCA8.v                           ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/RCA8.v      ;         ;
+; Negator.v                        ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Negator.v   ;         ;
+; BusMux.v                         ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/BusMux.v    ;         ;
+; AbsSign.v                        ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSign.v   ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 8          ;
+;                                             ;            ;
+; Total combinational functions               ; 8          ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 5          ;
+;     -- 3 input functions                    ; 3          ;
+;     -- <=2 input functions                  ; 0          ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 8          ;
+;     -- arithmetic mode                      ; 0          ;
+;                                             ;            ;
+; Total registers                             ; 0          ;
+;     -- Dedicated logic registers            ; 0          ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 16         ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+; Maximum fan-out node                        ; a[6]~input ;
+; Maximum fan-out                             ; 7          ;
+; Total fan-out                               ; 53         ;
+; Average fan-out                             ; 1.33       ;
++---------------------------------------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
+; |AbsSign                   ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 16   ; 0            ; |AbsSign                                     ; work         ;
+;    |BusMux:bm|             ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AbsSign|BusMux:bm                           ; work         ;
+;    |Negator:neg|           ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AbsSign|Negator:neg                         ; work         ;
+;       |RCA8:rca8|          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AbsSign|Negator:neg|RCA8:rca8               ; work         ;
+;          |FullAdder:fa3|   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AbsSign|Negator:neg|RCA8:rca8|FullAdder:fa3 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "Negator:neg|RCA8:rca8|FullAdder:fa0" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                          ;
++------+-------+----------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Negator:neg|RCA8:rca8"                                                                 ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; b[7..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[0]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; s[8]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu Feb 19 16:57:35 2015
+    Info: Processing started: Mon Feb 23 01:59:02 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Negator
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file fulladder.v
@@ -188,13 +284,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file busmuxt
     Info (12023): Found entity 1: BusMuxTestBench
 Info (12021): Found 1 design units, including 1 entities, in source file abssign.v
     Info (12023): Found entity 1: AbsSign
-Error (10170): Verilog HDL syntax error at AbsSignTestBench.v(11) near text "-" File: C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3/AbsSignTestBench.v Line: 11
-Error (10112): Ignored design unit "AbsSignTestBench" at AbsSignTestBench.v(2) due to previous errors File: C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3/AbsSignTestBench.v Line: 2
-Info (12021): Found 0 design units, including 0 entities, in source file abssigntestbench.v
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
-    Error: Peak virtual memory: 458 megabytes
-    Error: Processing ended: Thu Feb 19 16:57:36 2015
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:02
+Info (12021): Found 1 design units, including 1 entities, in source file abssigntestbench.v
+    Info (12023): Found entity 1: AbsSignTestBench
+Info (12127): Elaborating entity "AbsSign" for the top level hierarchy
+Info (12128): Elaborating entity "Negator" for hierarchy "Negator:neg"
+Info (12128): Elaborating entity "RCA8" for hierarchy "Negator:neg|RCA8:rca8"
+Info (12128): Elaborating entity "FullAdder" for hierarchy "Negator:neg|RCA8:rca8|FullAdder:fa0"
+Info (12128): Elaborating entity "BusMux" for hierarchy "BusMux:bm"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "b[7]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 24 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 8 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 363 megabytes
+    Info: Processing ended: Mon Feb 23 01:59:05 2015
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
