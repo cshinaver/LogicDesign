@@ -1,0 +1,182 @@
+|AbsSign
+a[0] => a[0].IN2
+a[1] => a[1].IN2
+a[2] => a[2].IN2
+a[3] => a[3].IN2
+a[4] => a[4].IN2
+a[5] => a[5].IN2
+a[6] => sel.IN4
+b[0] <= BusMux:bm.port3
+b[1] <= BusMux:bm.port3
+b[2] <= BusMux:bm.port3
+b[3] <= BusMux:bm.port3
+b[4] <= BusMux:bm.port3
+b[5] <= BusMux:bm.port3
+b[6] <= BusMux:bm.port3
+b[7] <= BusMux:bm.port3
+sign <= sel.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AbsSign|Negator:neg
+a[0] => _.IN1
+a[1] => _.IN1
+a[2] => _.IN1
+a[3] => _.IN1
+a[4] => _.IN1
+a[5] => _.IN1
+a[6] => _.IN1
+a[6] => _.IN1
+b[0] <= RCA8:rca8.port2
+b[1] <= RCA8:rca8.port2
+b[2] <= RCA8:rca8.port2
+b[3] <= RCA8:rca8.port2
+b[4] <= RCA8:rca8.port2
+b[5] <= RCA8:rca8.port2
+b[6] <= RCA8:rca8.port2
+b[7] <= RCA8:rca8.port2
+
+
+|AbsSign|Negator:neg|RCA8:rca8
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+s[0] <= FullAdder:fa0.port4
+s[1] <= FullAdder:fa1.port4
+s[2] <= FullAdder:fa2.port4
+s[3] <= FullAdder:fa3.port4
+s[4] <= FullAdder:fa4.port4
+s[5] <= FullAdder:fa5.port4
+s[6] <= FullAdder:fa6.port4
+s[7] <= FullAdder:fa7.port4
+s[8] <= FullAdder:fa7.port3
+
+
+|AbsSign|Negator:neg|RCA8:rca8|FullAdder:fa0
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AbsSign|Negator:neg|RCA8:rca8|FullAdder:fa1
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AbsSign|Negator:neg|RCA8:rca8|FullAdder:fa2
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AbsSign|Negator:neg|RCA8:rca8|FullAdder:fa3
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AbsSign|Negator:neg|RCA8:rca8|FullAdder:fa4
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AbsSign|Negator:neg|RCA8:rca8|FullAdder:fa5
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AbsSign|Negator:neg|RCA8:rca8|FullAdder:fa6
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AbsSign|Negator:neg|RCA8:rca8|FullAdder:fa7
+a => xor1.IN0
+a => and2.IN0
+b => xor1.IN1
+b => and2.IN1
+cin => xor2.IN1
+cin => and1.IN1
+cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
+s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|AbsSign|BusMux:bm
+a[0] => o.DATAA
+a[1] => o.DATAA
+a[2] => o.DATAA
+a[3] => o.DATAA
+a[4] => o.DATAA
+a[5] => o.DATAA
+a[6] => o.DATAA
+a[7] => o.DATAA
+b[0] => o.DATAB
+b[1] => o.DATAB
+b[2] => o.DATAB
+b[3] => o.DATAB
+b[4] => o.DATAB
+b[5] => o.DATAB
+b[6] => o.DATAB
+b[7] => o.DATAB
+sel => Decoder0.IN0
+o[0] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[1] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[2] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[3] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[4] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[5] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[6] <= o.DB_MAX_OUTPUT_PORT_TYPE
+o[7] <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
