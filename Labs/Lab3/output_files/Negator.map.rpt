@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Negator
-Tue Feb 24 00:38:26 2015
+Tue Feb 24 00:50:39 2015
 Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,15 +13,16 @@ Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
-  8. Port Connectivity Checks: "BCD7Seg:bcd7seg3"
-  9. Port Connectivity Checks: "BCD7Seg:bcd7seg2"
- 10. Port Connectivity Checks: "BCD7Seg:bcd7seg1"
- 11. Port Connectivity Checks: "Bin2BCD8:b2bcd8|Add3:Add3Digit5"
- 12. Port Connectivity Checks: "Bin2BCD8:b2bcd8|Add3:Add3Digit0"
- 13. Port Connectivity Checks: "AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa0"
- 14. Port Connectivity Checks: "AbsSign:abs|Negator:neg|RCA8:rca8"
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. Port Connectivity Checks: "Bin2Segs:b2s|BCD7Seg:bcd7seg3"
+  9. Port Connectivity Checks: "Bin2Segs:b2s|BCD7Seg:bcd7seg2"
+ 10. Port Connectivity Checks: "Bin2Segs:b2s|BCD7Seg:bcd7seg1"
+ 11. Port Connectivity Checks: "Bin2Segs:b2s|Bin2BCD8:b2bcd8|Add3:Add3Digit5"
+ 12. Port Connectivity Checks: "Bin2Segs:b2s|Bin2BCD8:b2bcd8|Add3:Add3Digit0"
+ 13. Port Connectivity Checks: "Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa0"
+ 14. Port Connectivity Checks: "Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8"
+ 15. Port Connectivity Checks: "Bin2Segs:b2s"
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -47,16 +48,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 24 00:38:26 2015      ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 24 00:50:39 2015      ;
 ; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Negator                                    ;
-; Top-level Entity Name              ; Bin2Segs                                   ;
+; Top-level Entity Name              ; Bin2Segs_wrapper                           ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 34                                         ;
-;     Total combinational functions  ; 34                                         ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
 ;     Dedicated logic registers      ; 0                                          ;
 ; Total registers                    ; 0                                          ;
-; Total pins                         ; 32                                         ;
+; Total pins                         ; 64                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -70,7 +71,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                                      ; Bin2Segs           ; Negator            ;
+; Top-level entity name                                                      ; Bin2Segs_wrapper   ; Negator            ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -151,71 +152,60 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                     ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                       ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
-; FullAdder.v                      ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/FullAdder.v ;         ;
-; RCA8.v                           ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/RCA8.v      ;         ;
-; Bin2BCD.v                        ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Bin2BCD.v   ;         ;
-; Add3.v                           ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Add3.v      ;         ;
-; Negator.v                        ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Negator.v   ;         ;
-; BusMux.v                         ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/BusMux.v    ;         ;
-; AbsSign.v                        ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSign.v   ;         ;
-; BCD7Seg.v                        ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/BCD7Seg.v   ;         ;
-; Bin2Segs.v                       ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Bin2Segs.v  ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
+; Bin2Segs_wrapper.v               ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Bin2Segs_wrapper.v ;         ;
+; FullAdder.v                      ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/FullAdder.v        ;         ;
+; RCA8.v                           ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/RCA8.v             ;         ;
+; Bin2BCD.v                        ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Bin2BCD.v          ;         ;
+; Add3.v                           ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Add3.v             ;         ;
+; Negator.v                        ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Negator.v          ;         ;
+; BusMux.v                         ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/BusMux.v           ;         ;
+; AbsSign.v                        ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSign.v          ;         ;
+; BCD7Seg.v                        ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/BCD7Seg.v          ;         ;
+; Bin2Segs.v                       ; yes             ; User Verilog HDL File  ; C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Bin2Segs.v         ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 34           ;
-;                                             ;              ;
-; Total combinational functions               ; 34           ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 24           ;
-;     -- 3 input functions                    ; 10           ;
-;     -- <=2 input functions                  ; 0            ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 34           ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 0            ;
-;     -- Dedicated logic registers            ; 0            ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 32           ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-; Maximum fan-out node                        ; num[0]~input ;
-; Maximum fan-out                             ; 11           ;
-; Total fan-out                               ; 173          ;
-; Average fan-out                             ; 1.77         ;
-+---------------------------------------------+--------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 64    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; SW[7] ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 71    ;
+; Average fan-out                             ; 0.55  ;
++---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                ;
-+-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
-; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
-+-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
-; |Bin2Segs                   ; 34 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 32   ; 0            ; |Bin2Segs                                                 ; work         ;
-;    |AbsSign:abs|            ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Bin2Segs|AbsSign:abs                                     ; work         ;
-;       |BusMux:bm|           ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Bin2Segs|AbsSign:abs|BusMux:bm                           ; work         ;
-;       |Negator:neg|         ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Bin2Segs|AbsSign:abs|Negator:neg                         ; work         ;
-;          |RCA8:rca8|        ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Bin2Segs|AbsSign:abs|Negator:neg|RCA8:rca8               ; work         ;
-;             |FullAdder:fa3| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Bin2Segs|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa3 ; work         ;
-;    |BCD7Seg:bcd7seg2|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Bin2Segs|BCD7Seg:bcd7seg2                                ; work         ;
-;    |BCD7Seg:bcd7seg3|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Bin2Segs|BCD7Seg:bcd7seg3                                ; work         ;
-;    |Bin2BCD8:b2bcd8|        ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Bin2Segs|Bin2BCD8:b2bcd8                                 ; work         ;
-;       |Add3:Add3Digit2|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Bin2Segs|Bin2BCD8:b2bcd8|Add3:Add3Digit2                 ; work         ;
-;       |Add3:Add3Digit3|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Bin2Segs|Bin2BCD8:b2bcd8|Add3:Add3Digit3                 ; work         ;
-;       |Add3:Add3Digit4|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Bin2Segs|Bin2BCD8:b2bcd8|Add3:Add3Digit4                 ; work         ;
-+-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |Bin2Segs_wrapper          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 64   ; 0            ; |Bin2Segs_wrapper   ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -235,7 +225,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BCD7Seg:bcd7seg3"                                                                                                                                                            ;
+; Port Connectivity Checks: "Bin2Segs:b2s|BCD7Seg:bcd7seg3"                                                                                                                                               ;
 +-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                                                                                                               ;
 +-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -244,7 +234,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BCD7Seg:bcd7seg2"                                                                                                                                                            ;
+; Port Connectivity Checks: "Bin2Segs:b2s|BCD7Seg:bcd7seg2"                                                                                                                                               ;
 +-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                                                                                                               ;
 +-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -253,7 +243,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BCD7Seg:bcd7seg1"                                                                                                                                                            ;
+; Port Connectivity Checks: "Bin2Segs:b2s|BCD7Seg:bcd7seg1"                                                                                                                                               ;
 +-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                                                                                                               ;
 +-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -261,35 +251,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------+
-; Port Connectivity Checks: "Bin2BCD8:b2bcd8|Add3:Add3Digit5" ;
-+------+-------+----------+-----------------------------------+
-; Port ; Type  ; Severity ; Details                           ;
-+------+-------+----------+-----------------------------------+
-; A[3] ; Input ; Info     ; Stuck at GND                      ;
-+------+-------+----------+-----------------------------------+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "Bin2Segs:b2s|Bin2BCD8:b2bcd8|Add3:Add3Digit5" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; A[3] ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
 
 
-+-------------------------------------------------------------+
-; Port Connectivity Checks: "Bin2BCD8:b2bcd8|Add3:Add3Digit0" ;
-+------+-------+----------+-----------------------------------+
-; Port ; Type  ; Severity ; Details                           ;
-+------+-------+----------+-----------------------------------+
-; A[3] ; Input ; Info     ; Stuck at GND                      ;
-+------+-------+----------+-----------------------------------+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "Bin2Segs:b2s|Bin2BCD8:b2bcd8|Add3:Add3Digit0" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; A[3] ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------+
-; Port Connectivity Checks: "AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa0" ;
-+------+-------+----------+---------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                           ;
-+------+-------+----------+---------------------------------------------------+
-; cin  ; Input ; Info     ; Stuck at GND                                      ;
-+------+-------+----------+---------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa0" ;
++------+-------+----------+----------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                        ;
++------+-------+----------+----------------------------------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                                                   ;
++------+-------+----------+----------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "AbsSign:abs|Negator:neg|RCA8:rca8"                                                     ;
+; Port Connectivity Checks: "Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8"                                        ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                             ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -299,12 +289,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Bin2Segs:b2s"                                                                                                                   ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                     ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+; hundreds ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (7 bits) it drives; bit(s) "hundreds[7..7]" have no fanouts ;
+; tens     ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (7 bits) it drives; bit(s) "tens[7..7]" have no fanouts     ;
+; ones     ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (7 bits) it drives; bit(s) "ones[7..7]" have no fanouts     ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -314,9 +315,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Feb 24 00:38:22 2015
+    Info: Processing started: Tue Feb 24 00:50:35 2015
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Negator
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file bin2segs_wrapper.v
+    Info (12023): Found entity 1: Bin2Segs_wrapper
 Info (12021): Found 1 design units, including 1 entities, in source file fulladder.v
     Info (12023): Found entity 1: FullAdder
 Info (12021): Found 1 design units, including 1 entities, in source file rca8.v
@@ -351,37 +354,78 @@ Info (12021): Found 1 design units, including 1 entities, in source file bcd7seg
     Info (12023): Found entity 1: BCD7Seg
 Info (12021): Found 1 design units, including 1 entities, in source file bin2segs.v
     Info (12023): Found entity 1: Bin2Segs
-Info (12127): Elaborating entity "Bin2Segs" for the top level hierarchy
-Info (12128): Elaborating entity "AbsSign" for hierarchy "AbsSign:abs"
-Info (12128): Elaborating entity "Negator" for hierarchy "AbsSign:abs|Negator:neg"
-Info (12128): Elaborating entity "RCA8" for hierarchy "AbsSign:abs|Negator:neg|RCA8:rca8"
-Info (12128): Elaborating entity "FullAdder" for hierarchy "AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa0"
-Info (12128): Elaborating entity "BusMux" for hierarchy "AbsSign:abs|BusMux:bm"
-Info (12128): Elaborating entity "Bin2BCD8" for hierarchy "Bin2BCD8:b2bcd8"
-Info (12128): Elaborating entity "Add3" for hierarchy "Bin2BCD8:b2bcd8|Add3:Add3Digit0"
-Info (12128): Elaborating entity "BCD7Seg" for hierarchy "BCD7Seg:bcd7seg1"
-Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12127): Elaborating entity "Bin2Segs_wrapper" for the top level hierarchy
+Warning (10034): Output port "LEDR[17..7]" at Bin2Segs_wrapper.v(4) has no driver
+Info (12128): Elaborating entity "Bin2Segs" for hierarchy "Bin2Segs:b2s"
+Info (12128): Elaborating entity "AbsSign" for hierarchy "Bin2Segs:b2s|AbsSign:abs"
+Info (12128): Elaborating entity "Negator" for hierarchy "Bin2Segs:b2s|AbsSign:abs|Negator:neg"
+Info (12128): Elaborating entity "RCA8" for hierarchy "Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8"
+Info (12128): Elaborating entity "FullAdder" for hierarchy "Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa0"
+Info (12128): Elaborating entity "BusMux" for hierarchy "Bin2Segs:b2s|AbsSign:abs|BusMux:bm"
+Info (12128): Elaborating entity "Bin2BCD8" for hierarchy "Bin2Segs:b2s|Bin2BCD8:b2bcd8"
+Info (12128): Elaborating entity "Add3" for hierarchy "Bin2Segs:b2s|Bin2BCD8:b2bcd8|Add3:Add3Digit0"
+Info (12128): Elaborating entity "BCD7Seg" for hierarchy "Bin2Segs:b2s|BCD7Seg:bcd7seg1"
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "hundreds[0]" is stuck at GND
-    Warning (13410): Pin "hundreds[1]" is stuck at GND
-    Warning (13410): Pin "hundreds[2]" is stuck at GND
-    Warning (13410): Pin "hundreds[3]" is stuck at GND
-    Warning (13410): Pin "hundreds[4]" is stuck at GND
-    Warning (13410): Pin "hundreds[5]" is stuck at GND
-    Warning (13410): Pin "hundreds[6]" is stuck at VCC
-    Warning (13410): Pin "hundreds[7]" is stuck at GND
-    Warning (13410): Pin "tens[7]" is stuck at GND
-    Warning (13410): Pin "ones[7]" is stuck at GND
-Info (286030): Timing-Driven Synthesis is running
+    Warning (13410): Pin "HEX0[0]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[3]" is stuck at GND
+    Warning (13410): Pin "HEX0[4]" is stuck at GND
+    Warning (13410): Pin "HEX0[5]" is stuck at GND
+    Warning (13410): Pin "HEX0[6]" is stuck at VCC
+    Warning (13410): Pin "HEX1[0]" is stuck at GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX1[3]" is stuck at GND
+    Warning (13410): Pin "HEX1[4]" is stuck at GND
+    Warning (13410): Pin "HEX1[5]" is stuck at GND
+    Warning (13410): Pin "HEX1[6]" is stuck at VCC
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
+    Warning (13410): Pin "HEX2[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[3]" is stuck at GND
+    Warning (13410): Pin "HEX2[4]" is stuck at GND
+    Warning (13410): Pin "HEX2[5]" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at VCC
+    Warning (13410): Pin "HEX3[0]" is stuck at GND
+    Warning (13410): Pin "HEX3[1]" is stuck at GND
+    Warning (13410): Pin "HEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX3[3]" is stuck at GND
+    Warning (13410): Pin "HEX3[4]" is stuck at GND
+    Warning (13410): Pin "HEX3[5]" is stuck at GND
+    Warning (13410): Pin "HEX3[6]" is stuck at GND
+    Warning (13410): Pin "LEDR[7]" is stuck at GND
+    Warning (13410): Pin "LEDR[8]" is stuck at GND
+    Warning (13410): Pin "LEDR[9]" is stuck at GND
+    Warning (13410): Pin "LEDR[10]" is stuck at GND
+    Warning (13410): Pin "LEDR[11]" is stuck at GND
+    Warning (13410): Pin "LEDR[12]" is stuck at GND
+    Warning (13410): Pin "LEDR[13]" is stuck at GND
+    Warning (13410): Pin "LEDR[14]" is stuck at GND
+    Warning (13410): Pin "LEDR[15]" is stuck at GND
+    Warning (13410): Pin "LEDR[16]" is stuck at GND
+    Warning (13410): Pin "LEDR[17]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 66 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 25 output pins
-    Info (21061): Implemented 34 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 363 megabytes
-    Info: Processing ended: Tue Feb 24 00:38:26 2015
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "SW[10]"
+    Warning (15610): No output dependent on input pin "SW[11]"
+    Warning (15610): No output dependent on input pin "SW[12]"
+    Warning (15610): No output dependent on input pin "SW[13]"
+    Warning (15610): No output dependent on input pin "SW[14]"
+    Warning (15610): No output dependent on input pin "SW[15]"
+    Warning (15610): No output dependent on input pin "SW[16]"
+    Warning (15610): No output dependent on input pin "SW[17]"
+Info (21057): Implemented 64 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 18 input pins
+    Info (21059): Implemented 46 output pins
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 56 warnings
+    Info: Peak virtual memory: 359 megabytes
+    Info: Processing ended: Tue Feb 24 00:50:39 2015
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 

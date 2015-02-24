@@ -1,11 +1,78 @@
-|Bin2Segs
-num[0] => num[0].IN1
-num[1] => num[1].IN1
-num[2] => num[2].IN1
-num[3] => num[3].IN1
-num[4] => num[4].IN1
-num[5] => num[5].IN1
-num[6] => num[6].IN1
+|Bin2Segs_wrapper
+SW[0] => A[0].IN1
+SW[1] => A[1].IN1
+SW[2] => A[2].IN1
+SW[3] => A[3].IN1
+SW[4] => A[4].IN1
+SW[5] => A[5].IN1
+SW[6] => A[6].IN1
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+SW[16] => ~NO_FANOUT~
+SW[17] => ~NO_FANOUT~
+HEX0[0] << Bin2Segs:b2s.port3
+HEX0[1] << Bin2Segs:b2s.port3
+HEX0[2] << Bin2Segs:b2s.port3
+HEX0[3] << Bin2Segs:b2s.port3
+HEX0[4] << Bin2Segs:b2s.port3
+HEX0[5] << Bin2Segs:b2s.port3
+HEX0[6] << Bin2Segs:b2s.port3
+HEX1[0] << Bin2Segs:b2s.port2
+HEX1[1] << Bin2Segs:b2s.port2
+HEX1[2] << Bin2Segs:b2s.port2
+HEX1[3] << Bin2Segs:b2s.port2
+HEX1[4] << Bin2Segs:b2s.port2
+HEX1[5] << Bin2Segs:b2s.port2
+HEX1[6] << Bin2Segs:b2s.port2
+HEX2[0] << Bin2Segs:b2s.port1
+HEX2[1] << Bin2Segs:b2s.port1
+HEX2[2] << Bin2Segs:b2s.port1
+HEX2[3] << Bin2Segs:b2s.port1
+HEX2[4] << Bin2Segs:b2s.port1
+HEX2[5] << Bin2Segs:b2s.port1
+HEX2[6] << Bin2Segs:b2s.port1
+HEX3[0] << Bin2Segs:b2s.port4
+HEX3[1] << <GND>
+HEX3[2] << <GND>
+HEX3[3] << <GND>
+HEX3[4] << <GND>
+HEX3[5] << <GND>
+HEX3[6] << <GND>
+LEDR[0] << A[0].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[1] << A[1].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[2] << A[2].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[3] << A[3].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[4] << A[4].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[5] << A[5].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] << A[6].DB_MAX_OUTPUT_PORT_TYPE
+LEDR[7] << <GND>
+LEDR[8] << <GND>
+LEDR[9] << <GND>
+LEDR[10] << <GND>
+LEDR[11] << <GND>
+LEDR[12] << <GND>
+LEDR[13] << <GND>
+LEDR[14] << <GND>
+LEDR[15] << <GND>
+LEDR[16] << <GND>
+LEDR[17] << <GND>
+
+
+|Bin2Segs_wrapper|Bin2Segs:b2s
+num[0] => ~NO_FANOUT~
+num[1] => ~NO_FANOUT~
+num[2] => ~NO_FANOUT~
+num[3] => ~NO_FANOUT~
+num[4] => ~NO_FANOUT~
+num[5] => ~NO_FANOUT~
+num[6] => ~NO_FANOUT~
 hundreds[0] <= BCD7Seg:bcd7seg1.port1
 hundreds[1] <= BCD7Seg:bcd7seg1.port1
 hundreds[2] <= BCD7Seg:bcd7seg1.port1
@@ -33,7 +100,7 @@ ones[7] <= BCD7Seg:bcd7seg3.port1
 sign <= AbsSign:abs.port2
 
 
-|Bin2Segs|AbsSign:abs
+|Bin2Segs_wrapper|Bin2Segs:b2s|AbsSign:abs
 a[0] => a[0].IN2
 a[1] => a[1].IN2
 a[2] => a[2].IN2
@@ -52,7 +119,7 @@ b[7] <= BusMux:bm.port3
 sign <= sel.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|AbsSign:abs|Negator:neg
+|Bin2Segs_wrapper|Bin2Segs:b2s|AbsSign:abs|Negator:neg
 a[0] => _.IN1
 a[1] => _.IN1
 a[2] => _.IN1
@@ -71,7 +138,7 @@ b[6] <= RCA8:rca8.port2
 b[7] <= RCA8:rca8.port2
 
 
-|Bin2Segs|AbsSign:abs|Negator:neg|RCA8:rca8
+|Bin2Segs_wrapper|Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -99,7 +166,7 @@ s[7] <= FullAdder:fa7.port4
 s[8] <= FullAdder:fa7.port3
 
 
-|Bin2Segs|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa0
+|Bin2Segs_wrapper|Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa0
 a => xor1.IN0
 a => and2.IN0
 b => xor1.IN1
@@ -110,7 +177,7 @@ cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
 s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa1
+|Bin2Segs_wrapper|Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa1
 a => xor1.IN0
 a => and2.IN0
 b => xor1.IN1
@@ -121,7 +188,7 @@ cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
 s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa2
+|Bin2Segs_wrapper|Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa2
 a => xor1.IN0
 a => and2.IN0
 b => xor1.IN1
@@ -132,7 +199,7 @@ cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
 s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa3
+|Bin2Segs_wrapper|Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa3
 a => xor1.IN0
 a => and2.IN0
 b => xor1.IN1
@@ -143,7 +210,7 @@ cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
 s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa4
+|Bin2Segs_wrapper|Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa4
 a => xor1.IN0
 a => and2.IN0
 b => xor1.IN1
@@ -154,7 +221,7 @@ cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
 s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa5
+|Bin2Segs_wrapper|Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa5
 a => xor1.IN0
 a => and2.IN0
 b => xor1.IN1
@@ -165,7 +232,7 @@ cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
 s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa6
+|Bin2Segs_wrapper|Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa6
 a => xor1.IN0
 a => and2.IN0
 b => xor1.IN1
@@ -176,7 +243,7 @@ cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
 s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa7
+|Bin2Segs_wrapper|Bin2Segs:b2s|AbsSign:abs|Negator:neg|RCA8:rca8|FullAdder:fa7
 a => xor1.IN0
 a => and2.IN0
 b => xor1.IN1
@@ -187,7 +254,7 @@ cout <= or1.DB_MAX_OUTPUT_PORT_TYPE
 s <= xor2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|AbsSign:abs|BusMux:bm
+|Bin2Segs_wrapper|Bin2Segs:b2s|AbsSign:abs|BusMux:bm
 a[0] => o.DATAA
 a[1] => o.DATAA
 a[2] => o.DATAA
@@ -215,7 +282,7 @@ o[6] <= o.DB_MAX_OUTPUT_PORT_TYPE
 o[7] <= o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|Bin2BCD8:b2bcd8
+|Bin2Segs_wrapper|Bin2Segs:b2s|Bin2BCD8:b2bcd8
 inBin[0] => ones[0].DATAIN
 inBin[1] => A4in[0].IN1
 inBin[2] => A3in[0].IN1
@@ -238,7 +305,7 @@ ones[2] <= Add3:Add3Digit4.S
 ones[3] <= Add3:Add3Digit4.S
 
 
-|Bin2Segs|Bin2BCD8:b2bcd8|Add3:Add3Digit0
+|Bin2Segs_wrapper|Bin2Segs:b2s|Bin2BCD8:b2bcd8|Add3:Add3Digit0
 A[0] => Decoder0.IN3
 A[1] => Decoder0.IN2
 A[2] => Decoder0.IN1
@@ -249,7 +316,7 @@ S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|Bin2BCD8:b2bcd8|Add3:Add3Digit1
+|Bin2Segs_wrapper|Bin2Segs:b2s|Bin2BCD8:b2bcd8|Add3:Add3Digit1
 A[0] => Decoder0.IN3
 A[1] => Decoder0.IN2
 A[2] => Decoder0.IN1
@@ -260,7 +327,7 @@ S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|Bin2BCD8:b2bcd8|Add3:Add3Digit2
+|Bin2Segs_wrapper|Bin2Segs:b2s|Bin2BCD8:b2bcd8|Add3:Add3Digit2
 A[0] => Decoder0.IN3
 A[1] => Decoder0.IN2
 A[2] => Decoder0.IN1
@@ -271,7 +338,7 @@ S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|Bin2BCD8:b2bcd8|Add3:Add3Digit3
+|Bin2Segs_wrapper|Bin2Segs:b2s|Bin2BCD8:b2bcd8|Add3:Add3Digit3
 A[0] => Decoder0.IN3
 A[1] => Decoder0.IN2
 A[2] => Decoder0.IN1
@@ -282,7 +349,7 @@ S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|Bin2BCD8:b2bcd8|Add3:Add3Digit4
+|Bin2Segs_wrapper|Bin2Segs:b2s|Bin2BCD8:b2bcd8|Add3:Add3Digit4
 A[0] => Decoder0.IN3
 A[1] => Decoder0.IN2
 A[2] => Decoder0.IN1
@@ -293,7 +360,7 @@ S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|Bin2BCD8:b2bcd8|Add3:Add3Digit5
+|Bin2Segs_wrapper|Bin2Segs:b2s|Bin2BCD8:b2bcd8|Add3:Add3Digit5
 A[0] => Decoder0.IN3
 A[1] => Decoder0.IN2
 A[2] => Decoder0.IN1
@@ -304,7 +371,7 @@ S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|Bin2BCD8:b2bcd8|Add3:Add3Digit6
+|Bin2Segs_wrapper|Bin2Segs:b2s|Bin2BCD8:b2bcd8|Add3:Add3Digit6
 A[0] => Decoder0.IN3
 A[1] => Decoder0.IN2
 A[2] => Decoder0.IN1
@@ -315,7 +382,7 @@ S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
 S[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|BCD7Seg:bcd7seg1
+|Bin2Segs_wrapper|Bin2Segs:b2s|BCD7Seg:bcd7seg1
 inDigit[0] => Decoder0.IN3
 inDigit[1] => Decoder0.IN2
 inDigit[2] => Decoder0.IN1
@@ -329,7 +396,7 @@ outSegments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 outSegments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|BCD7Seg:bcd7seg2
+|Bin2Segs_wrapper|Bin2Segs:b2s|BCD7Seg:bcd7seg2
 inDigit[0] => Decoder0.IN3
 inDigit[1] => Decoder0.IN2
 inDigit[2] => Decoder0.IN1
@@ -343,7 +410,7 @@ outSegments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 outSegments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Bin2Segs|BCD7Seg:bcd7seg3
+|Bin2Segs_wrapper|Bin2Segs:b2s|BCD7Seg:bcd7seg3
 inDigit[0] => Decoder0.IN3
 inDigit[1] => Decoder0.IN2
 inDigit[2] => Decoder0.IN1
