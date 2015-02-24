@@ -1,0 +1,14 @@
+module Bin2Segs (num, hundreds, tens, ones, sign);
+    input [6:0] num;
+    output [7:0] hundreds, tens, ones;
+    output sign;
+    wire [7:0] absSignOut;
+    wire [3:0] hunBCD, tenBCD, oneBCD;
+
+    AbsSign abs(num, absSignOut, sign);
+    Bin2BCD8 b2bcd8(absSignOut, hunBCD, tenBCD, oneBCD);
+    BCD7Seg bcd7seg1(hunBCD, hundreds);
+    BCD7Seg bcd7seg2(tenBCD, tens);
+    BCD7Seg bcd7seg3(oneBCD, ones);
+
+endmodule
