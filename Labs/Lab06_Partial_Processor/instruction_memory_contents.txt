@@ -1,0 +1,54 @@
+// Instruction Format, bits [15:12] contain opcode p: pppp_XXXX_XXXX_XXXX
+// ... ... op_load = 0 = 4'b0000, op_store = 1 = 4'b0001, op_add = 2 = 4'b0010
+// ... ... op_ldc = 3 = 4'b0011, op_sub = 4 = 4'b0100, op_jmpz = 5;  = 4'b0101
+// ... ... codes 6 to 15 are unused
+// ... load,	hex 0RMM: 0000_RRRR_MMMM_MMMM
+// ... ... bits [11:8] contain destination register address RRRR
+// ... ... bits  [7:0] contain source address in data memory MMMM
+// ... store,	hex 1RMM: 0001_RRRR_MMMM_MMMM (NOTE: Vahid Java-applet assembler produces store format 1MMR)
+// ... ... bits [11:8] contain source register address RRRR
+// ... ... bits  [7:0] contain destination address in data memory MMMM
+// ... add,		hex 2RAB: 0010_RRRR_AAAA_BBBB
+// ... ... bits [11:8] contain destination register address RRRR
+// ... ... bits  [7:4] contain source register A address AAAA
+// ... ... bits  [3:0] contain source register B address BBBB
+// ... ldc,		hex 3RII: 0011_RRRR_IIII_IIII
+// ... ... bits [11:8] contain destination register address RRRR
+// ... ... bits  [7:0] contain immediate constant number IIII_IIII
+// ... sub,		hex 4RAB: 0100_RRRR_AAAA_BBBB
+// ... ... bits [11:8] contain destination register address RRRR
+// ... ... bits  [7:4] contain source register A address AAAA
+// ... ... bits  [3:0] contain source register B address BBBB (subtrahend)
+// ... jmpz,	hex 5RJJ: 0101_RRRR_JJJJ_JJJJ
+// ... ... bits [11:8] contain source register address RRRR
+// ... ... bits  [7:0] contain relative jump distance JJJJ_JJJJ (two's complement)
+// ... UNKWN,	hex fXXX: 1111_XXXX_XXXX_XXXX
+// ... ... any opcodes from 6 to 15, return processor to idle
+
+
+// MEMORY CONTENTS in hexadecimal
+// ... Little endian bit ordering and word ordering
+//     MSB ... LSB, first line to the first address (16'h0000)
+
+// Test load, hex 0RMM
+//Note:  The code below is just sample code.  Place your code in the Instr column 
+//Also note that only the Instr column is uncommented for instructions 00 to 05 below.
+
+// MemAddr	Instr	Comment
+// -------------------------------------------------------------
+/* 00: */	0002	// Load R0 from data memory address 02
+/* 01: */	0103	// Load R1 from data memory address 03
+/* 02: */	0204	// Load R2 from data memory address 04
+/* 03: */	0305	// Load R3 from data memory address 05
+/* 04: */	0406	// Load R4 from data memory address 06
+/* 05: */	0507	// Load R5 from data memory address 07
+///* 06: */	0608	// Load R6 from data memory address 08
+///* 07: */	0709	// Load R7 from data memory address 09
+///* 08: */	080a	// Load R8 from data memory address 0a
+///* 09: */	090b	// Load R9 from data memory address 0b
+///* 0a: */	0a0c	// Load R10 from data memory address 0c
+///* 0b: */	0b0d	// Load R11 from data memory address 0d
+
+//@ 35	// Jump to address hex 35
+///* 35: */	1234	// Address hex 35
+///* 36: */	abba	// Address hex 36

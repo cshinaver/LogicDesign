@@ -1,0 +1,289 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Lab06_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/RF.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/PC.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/mux16_3x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux16_3x1
+# 
+# Top level modules:
+# 	mux16_3x1
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/JMP_addr.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module JMP_addr
+# 
+# Top level modules:
+# 	JMP_addr
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/IR.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module IR
+# 
+# Top level modules:
+# 	IR
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/inst_mem.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module inst_mem
+# 
+# Top level modules:
+# 	inst_mem
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/data_mem.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module data_mem
+# 
+# Top level modules:
+# 	data_mem
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/datapath.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/control.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/processor.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module processor
+# 
+# Top level modules:
+# 	processor
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor {C:/Users/charlesshinaver/Documents/Lab06_Partial_Processor/processor_testbench.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module processor_testbench
+# 
+# Top level modules:
+# 	processor_testbench
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  processor_testbench
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps processor_testbench 
+# Loading work.processor_testbench
+# Loading work.processor
+# Loading work.datapath
+# Loading work.RF
+# Loading work.alu
+# Loading work.mux16_3x1
+# Loading work.control
+# Loading work.controller
+# Loading work.PC
+# Loading work.JMP_addr
+# Loading work.IR
+# Loading work.data_mem
+# Loading work.inst_mem
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 500 ns
+# Initial reset (time @0ns)
+# Start processor (time @310ns)
+# Fetch 1 (time @350ns)
+do Simulate_processor.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# Compile design
+# vlog -vlog01compat -work work +incdir+../../ {../../PC.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# vlog -vlog01compat -work work +incdir+../../ {../../JMP_addr.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module JMP_addr
+# 
+# Top level modules:
+# 	JMP_addr
+# vlog -vlog01compat -work work +incdir+../../ {../../IR.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module IR
+# 
+# Top level modules:
+# 	IR
+# vlog -vlog01compat -work work +incdir+../../ {../../control.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# vlog -vlog01compat -work work +incdir+../../ {../../inst_mem.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module inst_mem
+# 
+# Top level modules:
+# 	inst_mem
+# vlog -vlog01compat -work work +incdir+../../ {../../data_mem.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module data_mem
+# 
+# Top level modules:
+# 	data_mem
+# vlog -vlog01compat -work work +incdir+../../ {../../RF.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RF
+# 
+# Top level modules:
+# 	RF
+# vlog -vlog01compat -work work +incdir+../../ {../../mux16_3x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux16_3x1
+# 
+# Top level modules:
+# 	mux16_3x1
+# vlog -vlog01compat -work work +incdir+../../ {../../alu.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# vlog -vlog01compat -work work +incdir+../../ {../../datapath.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# vlog -vlog01compat -work work +incdir+../../ {../../processor.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module processor
+# 
+# Top level modules:
+# 	processor
+# vlog -vlog01compat -work work +incdir+../../ {../../controller.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# vlog -vlog01compat -work work +incdir+../../ {../../processor_testbench.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module processor_testbench
+# 
+# Top level modules:
+# 	processor_testbench
+# 
+# Load design
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  processor_testbench
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps processor_testbench 
+# Loading work.processor_testbench
+# Loading work.processor
+# Loading work.datapath
+# Loading work.RF
+# Loading work.alu
+# Loading work.mux16_3x1
+# Loading work.control
+# Loading work.controller
+# Loading work.PC
+# Loading work.JMP_addr
+# Loading work.IR
+# Loading work.data_mem
+# Loading work.inst_mem
+# 
+# Set view and shown signals
+#add wave *
+# add wave -noupdate clk
+# add wave -noupdate -unsigned cycleCount
+# add wave -noupdate reset
+# add wave -noupdate start
+# 
+# Processor State and Instruction
+# add wave -noupdate -divider "Processor State and Instruction" 
+# add wave -noupdate -radix ascii sim:/processor_testbench/CPU/C/C/state_text
+#add wave -noupdate -radix unsigned sim:/processor_testbench/CPU/C/C/state
+# add wave -noupdate -radix ascii sim:/processor_testbench/CPU/C/C/opcode_text
+# add wave -noupdate -hex sim:/processor_testbench/CPU/C/C/inst
+# add wave -noupdate -label "Take Jump (CPU/C/PC_ld)" sim:/processor_testbench/CPU/C/PC_ld
+#add wave -noupdate -hex sim:/processor_testbench/CPU/C/P/jmp_addr
+# 
+# Instruction Memory
+# add wave -noupdate -divider "Instruction Memory" 
+# add wave -noupdate -hex sim:/processor_testbench/CPU/pc_addr
+# add wave -noupdate sim:/processor_testbench/CPU/I_rd
+# add wave -noupdate -hex sim:/processor_testbench/CPU/I_R_data
+# 
+# Data Memory
+# add wave -noupdate -divider "Data Memory" 
+# add wave -noupdate -hex sim:/processor_testbench/CPU/D_addr
+# add wave -noupdate sim:/processor_testbench/CPU/D_rd
+# add wave -noupdate -hex sim:/processor_testbench/CPU/D_R_data
+# add wave -noupdate sim:/processor_testbench/CPU/D_wr
+# add wave -noupdate -hex sim:/processor_testbench/CPU/D_W_data
+# 
+# Register File
+# add wave -noupdate -divider "Register File" 
+# add wave -noupdate -hex \
+# 	{sim:/processor_testbench/CPU/D/R/rfile[7]} \
+# 	{sim:/processor_testbench/CPU/D/R/rfile[6]} \
+# 	{sim:/processor_testbench/CPU/D/R/rfile[5]} \
+# 	{sim:/processor_testbench/CPU/D/R/rfile[4]} \
+# 	{sim:/processor_testbench/CPU/D/R/rfile[3]} \
+# 	{sim:/processor_testbench/CPU/D/R/rfile[2]} \
+# 	{sim:/processor_testbench/CPU/D/R/rfile[1]} \
+# 	{sim:/processor_testbench/CPU/D/R/rfile[0]}
+# add wave -noupdate -hex sim:/processor_testbench/CPU/D/R/rfile
+# 		
+# Control Signals
+# add wave -noupdate -divider "Control Signals"
+# add wave -noupdate sim:/processor_testbench/CPU/C/RF_Rp_zero
+# add wave -noupdate sim:/processor_testbench/CPU/C/RF_Rp_neg
+# 
+# Datapath Signals
+#add wave -noupdate -divider "Datapath Signals"
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run simulation
+# run 3000 ns
+# Initial reset (time @0ns)
+# Start processor (time @310ns)
+# Fetch 1 (time @350ns)
+# wave zoomfull
+# 0 ps
+# 3150 ns
+# 
+#.main clear
+#restart -force

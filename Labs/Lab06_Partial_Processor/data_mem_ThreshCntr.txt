@@ -1,0 +1,39 @@
+// MEMORY CONTENTS in hexadecimal
+// ... Memory array: 16-bit words, x 256
+// ... Little endian bit ordering and word ordering
+//     MSB ... LSB, first line to the first address (16'h0000)
+
+// MemAddr	Content	Comment
+// -------------------------------------------------------------
+/* 00: */	0000		// Address hex 0, you will write your final count to this address (see instructions in handout)
+/* 01: */	0011 		// Searched value (j)
+/* 02: */	00fd 		// Array size (number of elements, 16-bit words, 253 dec =fd hex)
+
+
+// Data array
+// ... 16 x 16 - 3 = 253 elements, each 16-bits
+// ... loaded as one sequence into a 1-dimensional memory
+
+// 	  xIdx  00   01   02   03   04   05   06   07   08   09   0a   0b   0c   0d   0e   0f
+// yIdx ---------------------------------------------------------------------------------------------
+/*  00  */	1568 0011 6581 6518 0017 1651 8216 8a4b 558f 0017 51c6 51bc 0011 d689 0120 0046
+/*  01  */	81a3 1568 0017 6581 6518 0011 1651 8216 8a4b 558f ed68 0011 51bc 681a d689 0120
+/*  02  */	0046 81a3 8658 0017 1651 8628 81a3 1821 68a4 b558 fed6 851c 651b 0000 ad68 9012
+/*  03  */	b151 5686 5816 5816 5186 28b1 5156 8658 1658 1651 8628 4165 1821 68a4 b558 fed6
+/*  04  */	0004 6e85 0017 1bc6 0000 0011 1200 0441 81a3 2168 a4b5 58fe 0000 1c65 1bc6 81ad
+/*  05  */	6890 0017 0465 14eb 1515 6865 8165 b151 5686 5816 b151 5686 abba 5816 5186 81a3
+/*  06  */	6518 2168 a4b5 0017 d685 0011 1bc6 81ad 6890 0011 0458 0011 8628 4165 1821 68a4
+/*  07  */	b558 fed6 0017 651b c681 ad68 9012 abba 8b15 1568 6581 0000 6518 6284 1651 8216
+/*  08  */	8a4b 0017 0017 51c6 51bc abba d689 0120 0041 6518 6284 1651 8216 8a4b 558f d685
+/*  09  */	c651 bc68 1ad6 8901 2000 418a 4b58 a4b5 58fe d685 1c65 1bc6 81ad 6890 1200 0011
+/*  0a  */	5186 81a3 6518 2168 a4b5 58fe d685 1c65 1bc6 81ad 0017 1200 0458 fed6 851c 658a
+/*  0b  */	4b55 8fed abba c651 bc68 1ad6 8901 2000 0000 1862 8416 5182 168a abba 8fed 6851
+/*  0c  */	c651 81a3 1ad6 8901 2000 41bc 681a d689 018a 4b55 8fed 8a4b 558f ed68 0017 51bc
+/*  0d  */	681a d689 0120 0041 6518 6284 0017 8216 8a4b 558f ed68 51c6 51bc 681a d689 0120
+/*  0e  */	0046 851c 651b c681 ad68 9012 0004 1651 8628 4165 1821 68a4 b558 fed6 851c 651b
+/*  0f  */	c681 ad68 9012 0004 2000 4165 1862 8416 0011 0011 4b55 0011 0017                 //c651 bc68 81a3
+
+
+//@ 35	// Jump to address hex 35
+///* 35: */	1234	// Address hex 35
+///* 36: */	abba	// Address hex 36

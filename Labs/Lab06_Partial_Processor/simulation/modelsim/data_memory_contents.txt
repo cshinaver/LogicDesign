@@ -1,0 +1,27 @@
+// MEMORY CONTENTS in hexadecimal
+// ... Memory array: 16-bit words, x 256
+// ... Little endian bit ordering and word ordering
+//     MSB ... LSB, first line to the first address (16'h0000)
+
+// MemAddr	Content	Comment
+// -------------------------------------------------------------
+/* 00: */	0000		// Address hex 0
+/* 01: */	9999 		// 
+/* 02: */	0001 		// 
+/* 03: */	dead 		// 
+/* 04: */	beef 		// 
+/* 05: */	0234 		// 
+/* 06: */	1ee7 		// 
+/* 07: */	abba 		// 
+/* 08: */	acdc 		// 
+/* 09: */	5555 		// 
+/* 0a: */	0000 		// 
+/* 0b: */	0000 		// 
+/* 0c: */	0000 		// 
+/* 0d: */	0000 		// 
+/* 0e: */	0000 		// 
+/* 0f: */	0000 		// 
+
+//@ 35	// Jump to address hex 35
+///* 35: */	1234	// Address hex 35
+///* 36: */	abba	// Address hex 36

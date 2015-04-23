@@ -1,0 +1,269 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\charlesshinaver\Documents\Lab06_Partial_Processor\simulation\modelsim
+valu
+I]85Wz6e_@9I?]gIhbZem`2
+VP8J:G8F^d171V2@RPAY3d0
+Z1 dC:\Users\charlesshinaver\Documents\Lab06_Partial_Processor\simulation\modelsim
+w1428897096
+8../../alu.v
+F../../alu.v
+L0 15
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+../../ -O0
+!i10b 1
+!s100 NJLT<8Z0ElXBIYVL5o9dk2
+!s85 0
+!s108 1429820854.475000
+!s107 ../../alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../alu.v|
+!s101 -O0
+vcontrol
+IV[eJTZbRZ9z60oX1^AEXV0
+VCVZD>>W2PZ`ABbLDkhINV2
+R1
+w1428895532
+8../../control.v
+F../../control.v
+L0 15
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 n8?IFIoEd>Al_QXhfb5Rd1
+!s85 0
+!s108 1429820854.210000
+!s107 ../../control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../control.v|
+!s101 -O0
+vcontroller
+IQDm1gHX9CDPSX?5DdEFG82
+V1QEWOJ7?im<K[oVIdhQ;o3
+R1
+w1429216435
+8../../controller.v
+F../../controller.v
+L0 15
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 <EdzS:9kliMaHAU1U;:CA1
+!s85 0
+!s108 1429820854.662000
+!s107 ../../controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../controller.v|
+!s101 -O0
+vdata_mem
+IgbcLzH8ULDcX<`V:08W?>0
+VHDg`^EGYS=DhfiJbe^R:L1
+R1
+w1397056006
+8../../data_mem.v
+F../../data_mem.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 2YI>YYBo`oYX=m`fPGl>Q3
+!s85 0
+!s108 1429820854.319000
+!s107 ../../data_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../data_mem.v|
+!s101 -O0
+vdatapath
+I5G[^c0L1o6DJcBRjfNIWk1
+VWU4>3W?6JC12J8OMKNPzd0
+R1
+w1428894908
+8../../datapath.v
+F../../datapath.v
+L0 15
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 K@FzWA51oRJSO>0h_lg[Z3
+!s85 0
+!s108 1429820854.538000
+!s107 ../../datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../datapath.v|
+!s101 -O0
+vinst_mem
+Iig1EY7LCBo3TPMagQE^An3
+V33M@K9245TBW:h>]^AQ=Q0
+R1
+w1397055994
+8../../inst_mem.v
+F../../inst_mem.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ^j:UfalFUIFJICM]mA6Rn1
+!s85 0
+!s108 1429820854.272000
+!s107 ../../inst_mem.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../inst_mem.v|
+!s101 -O0
+vIR
+I5CoGiSJA<ASE`W>H[Nai]2
+VnTKgYTMBPI?z>H[PJZT4N3
+R1
+w1396729502
+8../../IR.v
+F../../IR.v
+L0 15
+R2
+r1
+31
+R3
+R4
+n@i@r
+!i10b 1
+!s100 g8`[n@32?:ajJN_hLglHh1
+!s85 0
+!s108 1429820854.163000
+!s107 ../../IR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../IR.v|
+!s101 -O0
+vJMP_addr
+IX=e;PLTDEb3kgoQzndUV_1
+VMlM83OP<5?:a[1_egUW391
+R1
+w1397055162
+8../../JMP_addr.v
+F../../JMP_addr.v
+L0 15
+R2
+r1
+31
+R3
+R4
+n@j@m@p_addr
+!i10b 1
+!s100 @E59NJ5UidiLQ]Zk=d04n3
+!s85 0
+!s108 1429820854.116000
+!s107 ../../JMP_addr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../JMP_addr.v|
+!s101 -O0
+vmux16_3x1
+IebL3[]zNa;AN_@cLbggj73
+Vk]_B@SGPkfTi]GSKE=C`70
+R1
+w1428813744
+8../../mux16_3x1.v
+F../../mux16_3x1.v
+L0 15
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 <d?ha`z1BSa=VTdP;d[i>0
+!s85 0
+!s108 1429820854.428000
+!s107 ../../mux16_3x1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../mux16_3x1.v|
+!s101 -O0
+vPC
+IaoA<Y=n9Dc>:oA]_eQ0UR2
+Vd9kHBB:e0a@mP[9fOHP802
+R1
+w1396921048
+8../../PC.v
+F../../PC.v
+L0 15
+R2
+r1
+31
+R3
+n@p@c
+R4
+!i10b 1
+!s100 o81RD;]Ree_`LJPZd]83O1
+!s85 0
+!s108 1429820854.054000
+!s107 ../../PC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../PC.v|
+!s101 -O0
+vprocessor
+I_9k=0WW7G^;XM>NU1zSS50
+Vk<lA8T3InQBdN6J3<l=BH1
+R1
+w1428893878
+8../../processor.v
+F../../processor.v
+L0 15
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 m__A^5Z51_7QXYJ8>1HL01
+!s85 0
+!s108 1429820854.600000
+!s107 ../../processor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../processor.v|
+!s101 -O0
+vprocessor_testbench
+!i10b 1
+!s100 >?2nUA^?cNa_`F2nU86@z0
+IX;iS<kWm:GUVQd6_Fm?SQ3
+VD8B;_dLLo6OCRW<mjXPdX1
+R1
+w1429820822
+8../../processor_testbench.v
+F../../processor_testbench.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1429820854.725000
+!s107 ../../processor_testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../processor_testbench.v|
+!s101 -O0
+R3
+R4
+vRF
+IhDjI`n[cegaiGlQQIJXe=0
+VQ`LzC6eROB?RS;XYT80bP3
+R1
+w1396887808
+8../../RF.v
+F../../RF.v
+L0 15
+R2
+r1
+31
+R3
+R4
+n@r@f
+!i10b 1
+!s100 faehWKm0=8fSA5EZ2cVA<1
+!s85 0
+!s108 1429820854.382000
+!s107 ../../RF.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+../../|../../RF.v|
+!s101 -O0
