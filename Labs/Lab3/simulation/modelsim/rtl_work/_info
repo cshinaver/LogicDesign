@@ -2,46 +2,130 @@ m255
 K3
 13
 cModel Technology
-Z0 dC:\Users\Joshua\Documents\SophomoreYear\Spring\LogicDesign\Lab3\simulation\modelsim
-vBusMux
-IzgS2`lW=NWAc42b@k<Mzl1
-V72L<6M;WM><0Iaj9<el1k3
-Z1 dC:\Users\Joshua\Documents\SophomoreYear\Spring\LogicDesign\Lab3\simulation\modelsim
-w1424380631
-8C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3/BusMux.v
-FC:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3/BusMux.v
+Z0 dC:\Users\charlesshinaver\Desktop\LogicDesign\Labs\Lab3\simulation\modelsim
+vAbsSign
+IP8DJzob[6AMzDIFG@5;;[0
+VmEba78z8PZjHA=PejIJB<3
+Z1 dC:\Users\charlesshinaver\Desktop\LogicDesign\Labs\Lab3\simulation\modelsim
+Z2 w1424674593
+8C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSign.v
+FC:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSign.v
 L0 1
-Z2 OV;L;10.1d;51
+Z3 OV;L;10.1d;51
 r1
 31
-Z3 o-vlog01compat -work work -O0
+Z4 o-vlog01compat -work work -O0
+Z5 !s92 -vlog01compat -work work +incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3 -O0
+n@abs@sign
+!i10b 1
+!s100 ZnR;=9102l2Fc_6YZN?zN3
+!s85 0
+!s108 1424675423.957000
+!s107 C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSign.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3|C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSign.v|
+!s101 -O0
+vAbsSignTestBench
+!i10b 1
+!s100 R=kcTY@f_E7;WH>kNfcEO0
+ILcPmXZo7OQX[GdRXUlHRB2
+V`k?@:5Z`hQKBkj2cHKFd`3
+R1
+w1424675400
+8C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSignTestBench.v
+FC:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSignTestBench.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1424675424.020000
+!s107 C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSignTestBench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3|C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/AbsSignTestBench.v|
+!s101 -O0
+R4
+R5
+n@abs@sign@test@bench
+vBusMux
+I9JYKk^4M=W[n4ao9i_o;m0
+V72L<6M;WM><0Iaj9<el1k3
+R1
+R2
+8C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/BusMux.v
+FC:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/BusMux.v
+L0 1
+R3
+r1
+31
+R4
+R5
 n@bus@mux
 !i10b 1
-!s100 ?ZQ^P]QMm[hYd0XnEblj90
+!s100 mBnFf<^LaFMVW3clAAcIF0
 !s85 0
-!s108 1424381381.618000
-!s107 C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3/BusMux.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3|C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3/BusMux.v|
+!s108 1424675423.911000
+!s107 C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/BusMux.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3|C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/BusMux.v|
 !s101 -O0
-Z4 !s92 -vlog01compat -work work +incdir+C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3 -O0
-vBusMuxTestBench
-!i10b 1
-!s100 iTFhf8obWF4[abK3ei_be0
-I:KGGfVOYhCNC3KGbXYU<L0
-V7PnFZB=`QGJaLeJP6=eXG0
+vFullAdder
+IW`YCnHE35e0FUUHc2JezL2
+V=i9aNXV^o5WR;B8eN86Uj2
 R1
-w1424381354
-8C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3/BusMuxTestBench.v
-FC:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3/BusMuxTestBench.v
-L0 2
 R2
-r1
-!s85 0
-31
-!s108 1424381381.752000
-!s107 C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3/BusMuxTestBench.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3|C:/Users/Joshua/Documents/SophomoreYear/Spring/LogicDesign/Lab3/BusMuxTestBench.v|
-!s101 -O0
+8C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/FullAdder.v
+FC:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/FullAdder.v
+L0 1
 R3
+r1
+31
 R4
-n@bus@mux@test@bench
+n@full@adder
+R5
+!i10b 1
+!s100 B_jkKZ9X07Dj1B[IA2dkO3
+!s85 0
+!s108 1424675423.677000
+!s107 C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/FullAdder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3|C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/FullAdder.v|
+!s101 -O0
+vNegator
+IgACaa7:ZnMRIKiAQ>0@:H3
+VdUTgldhjiKUnbSkI]ECfC0
+R1
+R2
+8C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Negator.v
+FC:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Negator.v
+L0 1
+R3
+r1
+31
+R4
+R5
+n@negator
+!i10b 1
+!s100 69OXDGlAPQU^hDTzP0K>Q0
+!s85 0
+!s108 1424675423.833000
+!s107 C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Negator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3|C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/Negator.v|
+!s101 -O0
+vRCA8
+In]k8Gh;RPmP<8Z]5@8S=o1
+VOhdm0BZh6:Mg>P<;mzc[]2
+R1
+R2
+8C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/RCA8.v
+FC:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/RCA8.v
+L0 1
+R3
+r1
+31
+R4
+R5
+n@r@c@a8
+!i10b 1
+!s100 >Z2ORM4h=nnBZ4NKG[NQ^0
+!s85 0
+!s108 1424675423.739000
+!s107 C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/RCA8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3|C:/Users/charlesshinaver/Desktop/LogicDesign/Labs/Lab3/RCA8.v|
+!s101 -O0

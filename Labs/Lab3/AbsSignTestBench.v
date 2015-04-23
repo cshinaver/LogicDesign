@@ -2,13 +2,13 @@
 module AbsSignTestBench();
 	reg [6:0] a;
 	wire sign;
-	wire o;
+	wire [7:0] o;
 	
 	AbsSign absS(a, o, sign);
 	
 	initial begin
 		a = 7'd5; #20;
-		b = 7'd-5; #20;
+		a = -7'd5; #20;
 	end
 endmodule
 	

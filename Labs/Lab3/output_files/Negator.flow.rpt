@@ -1,6 +1,6 @@
 Flow report for Negator
-Thu Feb 19 16:57:36 2015
-Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Tue Feb 24 00:51:25 2015
+Quartus II 32-bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Flow Failed - Thu Feb 19 16:57:36 2015     ;
-; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Flow Status                        ; Successful - Tue Feb 24 00:51:25 2015      ;
+; Quartus II 32-bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; Negator                                    ;
-; Top-level Entity Name              ; AbsSign                                    ;
+; Top-level Entity Name              ; Bin2Segs_wrapper                           ;
 ; Family                             ; Cyclone IV E                               ;
 ; Device                             ; EP4CE115F29C7                              ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 0 / 114,480 ( 0 % )                        ;
+;     Total combinational functions  ; 0 / 114,480 ( 0 % )                        ;
+;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                        ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 64 / 529 ( 12 % )                          ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                      ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                            ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -64,71 +64,83 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/19/2015 16:57:36 ;
+; Start date & time ; 02/24/2015 00:50:36 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Negator             ;
 +-------------------+---------------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                   ;
++--------------------------------------+---------------------------------------+---------------+------------------+------------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name      ; Section Id       ;
++--------------------------------------+---------------------------------------+---------------+------------------+------------------+
+; COMPILER_SIGNATURE_ID                ; 121377802999.142475703603520          ; --            ; --               ; --               ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --               ; NegatorTestBench ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --               ; BusMuxTestBench  ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --               ; AbsSignTestBench ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; AbsSignTestBench                      ; --            ; --               ; eda_simulation   ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --               ; eda_simulation   ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --               ; --               ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --               ; eda_simulation   ;
+; EDA_TEST_BENCH_FILE                  ; NegatorTestBench.v                    ; --            ; --               ; NegatorTestBench ;
+; EDA_TEST_BENCH_FILE                  ; BusMuxTestBench.v                     ; --            ; --               ; BusMuxTestBench  ;
+; EDA_TEST_BENCH_FILE                  ; AbsSignTestBench.v                    ; --            ; --               ; AbsSignTestBench ;
+; EDA_TEST_BENCH_MODULE_NAME           ; NegatorTestBench                      ; --            ; --               ; NegatorTestBench ;
+; EDA_TEST_BENCH_MODULE_NAME           ; BusMuxTestBench                       ; --            ; --               ; BusMuxTestBench  ;
+; EDA_TEST_BENCH_MODULE_NAME           ; AbsSignTestBench                      ; --            ; --               ; AbsSignTestBench ;
+; EDA_TEST_BENCH_NAME                  ; NegatorTestBench                      ; --            ; --               ; eda_simulation   ;
+; EDA_TEST_BENCH_NAME                  ; BusMuxTestBench                       ; --            ; --               ; eda_simulation   ;
+; EDA_TEST_BENCH_NAME                  ; AbsSignTestBench                      ; --            ; --               ; eda_simulation   ;
+; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --               ; eda_simulation   ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --               ; --               ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --               ; --               ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --               ; --               ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; Bin2Segs_wrapper ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; Bin2Segs_wrapper ; Top              ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; Bin2Segs_wrapper ; Top              ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --               ; --               ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --               ; --               ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --               ; --               ;
+; TOP_LEVEL_ENTITY                     ; Bin2Segs_wrapper                      ; Negator       ; --               ; --               ;
++--------------------------------------+---------------------------------------+---------------+------------------+------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                              ;
-+--------------------------------------+---------------------------------------+---------------+-------------+------------------+
-; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id       ;
-+--------------------------------------+---------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID                ; 101504289775706.142438305608632       ; --            ; --          ; --               ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; NegatorTestBench ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; BusMuxTestBench  ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; AbsSignTestBench ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; BusMuxTestBench                       ; --            ; --          ; eda_simulation   ;
-; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation   ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --               ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation   ;
-; EDA_TEST_BENCH_FILE                  ; NegatorTestBench.v                    ; --            ; --          ; NegatorTestBench ;
-; EDA_TEST_BENCH_FILE                  ; BusMuxTestBench.v                     ; --            ; --          ; BusMuxTestBench  ;
-; EDA_TEST_BENCH_FILE                  ; AbsSignTestBench.v                    ; --            ; --          ; AbsSignTestBench ;
-; EDA_TEST_BENCH_MODULE_NAME           ; NegatorTestBench                      ; --            ; --          ; NegatorTestBench ;
-; EDA_TEST_BENCH_MODULE_NAME           ; BusMuxTestBench                       ; --            ; --          ; BusMuxTestBench  ;
-; EDA_TEST_BENCH_MODULE_NAME           ; AbsSignTestBench                      ; --            ; --          ; AbsSignTestBench ;
-; EDA_TEST_BENCH_NAME                  ; NegatorTestBench                      ; --            ; --          ; eda_simulation   ;
-; EDA_TEST_BENCH_NAME                  ; BusMuxTestBench                       ; --            ; --          ; eda_simulation   ;
-; EDA_TEST_BENCH_NAME                  ; AbsSignTestBench                      ; --            ; --          ; eda_simulation   ;
-; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation   ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --               ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --               ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --               ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; AbsSign     ; Top              ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; AbsSign     ; Top              ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; AbsSign     ; Top              ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --               ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --               ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --               ;
-; TOP_LEVEL_ENTITY                     ; AbsSign                               ; Negator       ; --          ; --               ;
-+--------------------------------------+---------------------------------------+---------------+-------------+------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 351 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:25     ; 1.0                     ; 678 MB              ; 00:00:23                           ;
+; Assembler                 ; 00:00:09     ; 1.0                     ; 375 MB              ; 00:00:08                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 413 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 324 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:43     ; --                      ; --                  ; 00:00:37                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 458 MB              ; 00:00:01                           ;
-; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-
-
-+-----------------------------------------------------------------------------------+
-; Flow OS Summary                                                                   ;
-+----------------------+------------------+-----------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; JoshVAIO2013     ; Windows 7 ; 6.2        ; x86_64         ;
-+----------------------+------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; CHARLESSHIN7F42  ; Windows 7 ; 6.1        ; i686           ;
+; Fitter                    ; CHARLESSHIN7F42  ; Windows 7 ; 6.1        ; i686           ;
+; Assembler                 ; CHARLESSHIN7F42  ; Windows 7 ; 6.1        ; i686           ;
+; TimeQuest Timing Analyzer ; CHARLESSHIN7F42  ; Windows 7 ; 6.1        ; i686           ;
+; EDA Netlist Writer        ; CHARLESSHIN7F42  ; Windows 7 ; 6.1        ; i686           ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Negator
+quartus_fit --read_settings_files=off --write_settings_files=off Lab3 -c Negator
+quartus_asm --read_settings_files=off --write_settings_files=off Lab3 -c Negator
+quartus_sta Lab3 -c Negator
+quartus_eda --read_settings_files=off --write_settings_files=off Lab3 -c Negator
 
 
 
